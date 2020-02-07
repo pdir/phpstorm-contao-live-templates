@@ -1,0 +1,17 @@
+<!-- Contao Live Templates v1.0.0 -->
+<templateSet group="Contao CMS - PHP">
+    <!-- Little Helper -->
+    <template name="dd" value="dump($SELECTION$);die();" description="dump(&quot;Dump &amp; Die&quot;);" toReformat="true" toShortenFQNames="true">
+        <context>
+            <option name="PHP" value="true" />
+        </context>
+    </template>
+    <!-- DCA -->
+    <!-- Contao DCA field - Text -->
+    <template name="cd text" value="'$NAME$' => [&#10; 'label' => &amp;$GLOBALS['TL_LANG'][$strTable]['$NAME$'],&#10; 'exclude' => true,&#10; 'sorting' => true,&#10; 'inputType' => 'text',&#10; 'eval' => ['maxlength'=>255, 'tl_class'=>'w50'],&#10; 'sql' => &quot;varchar(255) NOT NULL default ''&quot;&#10; ]," description="DCA field with inputType text" toReformat="true" toShortenFQNames="true">
+        <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+        <context>
+            <option name="PHP" value="true" />
+        </context>
+    </template>
+</templateSet>
