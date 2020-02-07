@@ -14,4 +14,18 @@
             <option name="PHP" value="true" />
         </context>
     </template>
+    <!-- Contao DCA field - Password -->
+    <template name="cdpwd" value="'$NAME$' => [&#10; 'label' => &amp;$GLOBALS['TL_LANG'][$strTable]['$NAME$'],&#10; 'exclude' => true,&#10; 'inputType' => 'password',&#10; 'eval' => ['tl_class'=>'w50', 'mandatory'=>true, 'preserveTags'=>true, 'minlength'=>\Contao\Config::get('minPasswordLength')],&#10; 'sql' => &quot;varchar(128) NOT NULL default ''&quot;&#10; ]," description="DCA field with inputType text" toReformat="true" toShortenFQNames="true">
+        <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+        <context>
+            <option name="PHP" value="true" />
+        </context>
+    </template>
+    <!-- Contao DCA field - Textarea -->
+    <template name="cdtextarea" value="'$NAME$' => [&#10; 'label' => &amp;$GLOBALS['TL_LANG'][$strTable]['$NAME$'],&#10; 'exclude' => true,&#10; 'search' => true,&#10; 'inputType' => 'textarea',&#10; 'eval' => ['rte'=>'tinyMCE', 'tl_class'=>'clr'],&#10; 'sql' => &quot;text NOT NULL&quot;&#10; ]," description="DCA field with inputType text" toReformat="true" toShortenFQNames="true">
+        <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+        <context>
+            <option name="PHP" value="true" />
+        </context>
+    </template>
 </templateSet>
