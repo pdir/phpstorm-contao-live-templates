@@ -1,7 +1,19 @@
 <!-- Contao Live Templates v1.0.0 -->
 <templateSet group="Contao CMS - PHP">
     <!-- Little Helper -->
-    <template name="dd" value="dump($VARIABLE$);    die();" description="dump(&quot;Dump &amp; Die&quot;);" toReformat="true" toShortenFQNames="true">
+    <template name="cdd" value="var_dump($VARIABLE$);&#10; die();" description="var_dump(&quot;Dump &amp; Die&quot;);" toReformat="true" toShortenFQNames="true">
+        <variable name="VARIABLE" expression="" defaultValue="" alwaysStopAt="true" />
+        <context>
+            <option name="PHP" value="true" />
+        </context>
+    </template>
+    <template name="cd" value="echo &quot;<br>$VARIABLE$<br>&lt;pre&gt;&quot;; var_dump($VARIABLE$); echo &quot;&lt;/pre&gt;&quot;;" description="&lt;pre&gt; var_dump(); &lt;/pre&gt;" toReformat="false" toShortenFQNames="true">
+        <variable name="VARIABLE" expression="" defaultValue="" alwaysStopAt="true" />
+        <context>
+            <option name="PHP" value="true" />
+        </context>
+    </template>
+    <template name="cp" value="echo &quot;<br>$VARIABLE$<br>&lt;pre&gt;&quot;; print_r($VARIABLE$); echo &quot;&lt;/pre&gt;&quot;;" description="&lt;pre&gt; print_r(); &lt;/pre&gt;" toReformat="false" toShortenFQNames="true">
         <variable name="VARIABLE" expression="" defaultValue="" alwaysStopAt="true" />
         <context>
             <option name="PHP" value="true" />
