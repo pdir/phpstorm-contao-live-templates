@@ -1,7 +1,8 @@
 <!-- Contao Live Templates v1.0.0 -->
 <templateSet group="Contao CMS - PHP">
     <!-- Little Helper -->
-    <template name="dd" value="dump($SELECTION$);die();" description="dump(&quot;Dump &amp; Die&quot;);" toReformat="true" toShortenFQNames="true">
+    <template name="dd" value="dump($VARIABLE$);    die();" description="dump(&quot;Dump &amp; Die&quot;);" toReformat="true" toShortenFQNames="true">
+        <variable name="VARIABLE" expression="" defaultValue="" alwaysStopAt="true" />
         <context>
             <option name="PHP" value="true" />
         </context>
