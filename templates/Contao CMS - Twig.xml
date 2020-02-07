@@ -1,0 +1,28 @@
+<!-- Contao Live Templates v1.0.0 -->
+<templateSet group="Contao CMS - Twig">
+    <!-- Little Helper -->
+    <template name="lorem" value="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod&#10;tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,&#10;quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo&#10;consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse&#10;cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non&#10;proident, sunt in culpa qui officia deserunt mollit anim id est laborum." description="" toReformat="true" toShortenFQNames="true">
+        <context>
+            <option name="HTML_TEXT" value="true" />
+            <option name="HTML" value="true" />
+            <option name="XSL_TEXT" value="true" />
+            <option name="XML" value="true" />
+            <option name="XML_TEXT" value="true" />
+            <option name="JSON" value="true" />
+            <option name="JAVA_SCRIPT" value="true" />
+            <option name="JS_EXPRESSION" value="true" />
+            <option name="JS_STATEMENT" value="true" />
+            <option name="PHP String Literal" value="true" />
+        </context>
+    </template>
+    <template name="td" value="{{ dump($SELECTION$) }}" description="{{ dump() }}" toReformat="false" toShortenFQNames="true">
+        <context>
+            <option name="PHP" value="true" />
+        </context>
+    </template>
+    <template name="tdump" value="&lt;pre&gt;{{ dump($SELECTION$) }}&lt;/pre&gt;" description="&lt;pre&gt;{{ dump() }}&lt;/pre&gt;" toReformat="false" toShortenFQNames="true">
+        <context>
+            <option name="PHP" value="true" />
+        </context>
+    </template>
+</templateSet>
