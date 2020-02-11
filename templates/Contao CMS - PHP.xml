@@ -16,7 +16,55 @@
         </context>
     </template>
     <!-- Contao DCA field - Textarea -->
-    <template name="cdtextarea" value="'$NAME$' => [&#10; 'label' => &amp;$GLOBALS['TL_LANG'][$strTable]['$NAME$'],&#10; 'exclude' => true,&#10; 'search' => true,&#10; 'inputType' => 'textarea',&#10; 'eval' => ['rte'=>'tinyMCE', 'tl_class'=>'clr'],&#10; 'sql' => &quot;text NOT NULL&quot;&#10; ]," description="DCA field with inputType text" toReformat="true" toShortenFQNames="true">
+    <template name="cdtextarea" value="'$NAME$' => [&#10; 'label' => &amp;$GLOBALS['TL_LANG'][$strTable]['$NAME$'],&#10; 'exclude' => true,&#10; 'search' => true,&#10; 'inputType' => 'textarea',&#10; 'eval' => ['rte'=>'tinyMCE', 'tl_class'=>'clr'],&#10; 'sql' => &quot;text NOT NULL&quot;&#10; ]," description="DCA field with inputType textarea" toReformat="true" toShortenFQNames="true">
+        <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+        <context>
+            <option name="PHP" value="true" />
+        </context>
+    </template>
+    <!-- Contao DCA field - Select -->
+    <template name="cdselect" value="'$NAME$' => [&#10; 'label' => &amp;$GLOBALS['TL_LANG'][$strTable]['$NAME$'],&#10; 'exclude' => true,&#10; 'inputType' => 'select'&#10;, 'options' => $GLOBALS['TL_LANG'][$strTable]['$NAME$']['options'],&#10; //'foreignKey' => 'tl_user.name',&#10; //'options_callback' => ['$CLASS$', '$METHOD$'],&#10; 'eval' => ['includeBlankOption'=>true, 'tl_class'=>'w50'],&#10; 'sql' => &quot;varchar(255) NOT NULL default ''&quot;&#10; ]," description="DCA field with inputType select" toReformat="true" toShortenFQNames="true">
+        <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+        <variable name="CLASS" expression="" defaultValue="" alwaysStopAt="true" />
+        <variable name="METHOD" expression="" defaultValue="" alwaysStopAt="true" />
+        <context>
+            <option name="PHP" value="true" />
+        </context>
+    </template>
+    <!-- Contao DCA field - Clicklist (Select Variant) -->
+    <template name="cdclicklist" value="'$NAME$' => [&#10; 'label' => &amp;$GLOBALS['TL_LANG'][$strTable]['$NAME$'],&#10; 'exclude' => true,&#10; 'inputType' => 'select'&#10;, 'options' => $GLOBALS['TL_LANG'][$strTable]['$NAME$']['options'],&#10; //'foreignKey' => 'tl_user.name',&#10; //'options_callback' => ['$CLASS$', '$METHOD$'],&#10; 'eval' => ['maxlength'=>255, 'includeBlankOption'=>true, 'multiple'=>true, 'chosen'=>true],&#10; 'sql' => &quot;varchar(255) NOT NULL default ''&quot;&#10; ]," description="DCA field with inputType select for clicklist" toReformat="true" toShortenFQNames="true">
+        <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+        <variable name="CLASS" expression="" defaultValue="" alwaysStopAt="true" />
+        <variable name="METHOD" expression="" defaultValue="" alwaysStopAt="true" />
+        <context>
+            <option name="PHP" value="true" />
+        </context>
+    </template>
+    <!-- Contao DCA field - Checkbox -->
+    <template name="cdcheckbox" value="'$NAME$' => [&#10; 'label' => &amp;$GLOBALS['TL_LANG'][$strTable]['$NAME$'],&#10; 'exclude' => true,&#10; 'inputType' => 'checkbox',&#10; 'default' => 1,&#10; 'eval' => ['tl_class'=>'w50'],&#10; 'sql' => &quot;char(1) NOT NULL default ''&quot;&#10; ]," description="DCA field with inputType checkbox" toReformat="true" toShortenFQNames="true">
+        <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+        <context>
+            <option name="PHP" value="true" />
+        </context>
+    </template>
+    <!-- Contao DCA field - Radio Button -->
+    <template name="cdradio" value="'$NAME$' => [&#10; 'label' => &amp;$GLOBALS['TL_LANG'][$strTable]['$NAME$'],&#10; 'exclude' => true,&#10; 'inputType' => 'radio',&#10; 'eval' => ['tl_class'=>'w50'],&#10; 'sql' => &quot;varchar(255) NOT NULL default ''&quot;&#10; ]," description="DCA field with inputType radio" toReformat="true" toShortenFQNames="true">
+        <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+        <context>
+            <option name="PHP" value="true" />
+        </context>
+    </template>
+    <!-- Contao DCA field - Table with Radio Button (radioTable) -->
+    <template name="cdtradio" value="'$NAME$' => [&#10; 'label' => &amp;$GLOBALS['TL_LANG'][$strTable]['$NAME$'],&#10; 'exclude' => true,&#10; 'inputType' => 'radioTable',&#10; 'options' => $GLOBALS['TL_LANG'][$strTable]['$NAME$']['options'],&#10; //'foreignKey' => 'tl_user.name',&#10; //'options_callback' => ['$CLASS$', '$METHOD$'],&#10; 'eval' => ['col'=>4, 'tl_class'=>'w50'],&#10; 'sql' => &quot;varchar(255) NOT NULL default ''&quot;&#10; ]," description="DCA field with inputType radioTable" toReformat="true" toShortenFQNames="true">
+        <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+        <variable name="CLASS" expression="" defaultValue="" alwaysStopAt="true" />
+        <variable name="METHOD" expression="" defaultValue="" alwaysStopAt="true" />
+        <context>
+            <option name="PHP" value="true" />
+        </context>
+    </template>
+    <!-- Contao DCA field - Image Size (imageSize) -->
+    <template name="cdimagesize" value="'$NAME$' => [&#10; 'label' => &amp;$GLOBALS['TL_LANG'][$strTable]['$NAME$'],&#10; 'exclude' => true,&#10; 'inputType' => 'imageSize',&#10; 'options' => \Contao\System::getImageSizes(),&#10; 'reference' => &$GLOBALS['TL_LANG']['MSC'],&#10; 'eval' => ['rgxp'=>'natural', 'includeBlankOption'=>true, 'nospace'=>true, 'helpwizard'=>true, 'tl_class'=>'w50'],&#10; 'sql' => &quot;varchar(64) NOT NULL default ''&quot;&#10; ]," description="DCA field with inputType imageSize" toReformat="true" toShortenFQNames="true">
         <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
         <context>
             <option name="PHP" value="true" />
